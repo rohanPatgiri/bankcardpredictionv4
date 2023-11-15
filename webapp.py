@@ -2,7 +2,9 @@ import streamlit as st
 import pandas as pd
 import pickle
 import numpy as np
-st.write ("## This a  practice APP ")
+st.write ("## Card Type prediction App ")
+
+
 
 st.sidebar.header("Enter the user data below")
 
@@ -97,20 +99,7 @@ input_df["Marital_Status"]= label_encoded(input_df['Marital_Status'])
 
 #  Code for Encoding ends
 
-'''
-bank_raw = pd.read_csv("Bank customers.csv")
-bank = bank_raw.drop(columns= ['Card_Category', 'CLIENTNUM'])
-df = pd.concat([input_df, bank], axis = 0)
 
-
-encode = ['Attrition_Flag','Education_Level', "Gender", "Marital_Status", "Income_Category"]
-for col in encode:
-    dummy = pd.get_dummies(df[col], prefix=col)
-    df = pd.concat([df,dummy], axis=0)
-    del df[col]
-df = df[:1] # Selects only the first row (the user input data)
-
-'''
 #........................
 
 # Displays the user input features
